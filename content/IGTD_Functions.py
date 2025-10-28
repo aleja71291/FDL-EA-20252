@@ -574,7 +574,7 @@ def generate_image_data(data, index, num_row, num_column, coord, image_folder=No
     '''
 
     if isinstance(data, pd.DataFrame):
-        samples = data.index.map(np.str)
+        samples = data.index.map(str)
         data = data.values
     else:
         samples = [str(i) for i in range(data.shape[0])]
